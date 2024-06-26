@@ -1,0 +1,104 @@
+MDFloatLayout:
+    md_bg_color: 1,1,1,0
+    Image:
+        source: "logo1.png"
+        pos_hint: {'center_x': .5,'center_y': .92}
+        size_hint: .2, .2
+    MDLabel:
+        text: "Calculatrice EMC"
+        bold: True
+        pos_hint: {'center_x': .5,'center_y': .82}
+        font_size: "28sp"
+        halign: "center"
+    MDFloatLayout:
+        size_hint: .9, .1
+        pos_hint: {'center_x':  .5,'center_y': .68}
+        canvas:
+            Color:
+                rgb: 240/255, 240/255, 240/255, 255/255
+        
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [6]
+        MDLabel:
+            text: "Kg"
+            pos_hint: {'center_x': .5,'center_y': .5}
+            font_size: "22sp"
+            padding_x: '12dp'
+        TextInput:
+            id: poids
+            hint_text: "Votre poids"
+            size_hint: .9, None
+            pos_hint: {'center_x': .6,'center_y': .49}
+            height: self.minimum_height
+            font_size: '20sp'
+            hint_text_color: 170/255, 170/255, 170/255, 255/255
+            background_color: 1, 1, 1, 0
+            cursor_text_color: 0, 0, 0, 1 
+            padding: 18
+            multiline: False
+    MDFloatLayout:
+        size_hint: .9, .1
+        pos_hint: {'center_x':  .5,'center_y': .55}
+        canvas:
+            Color:
+                rgb: 240/255, 240/255, 240/255, 255/255
+        
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [6]
+        MDLabel:
+            text: "m"
+            pos_hint: {'center_x': .5,'center_y': .5}
+            font_size: "22sp"
+            padding_x: '12dp'
+        TextInput:
+            id: taille
+            hint_text: "Votre taille"
+            size_hint: .9, None
+            pos_hint: {'center_x': .6,'center_y': .49}
+            height: self.minimum_height
+            font_size: '20sp'
+            hint_text_color: 170/255, 170/255, 170/255, 255/255
+            background_color: 1, 1, 1, 0
+            cursor_text_color: 0, 0, 0, 1 
+            padding: 18
+            multiline: False
+    MDLabel:
+        id: imc
+        text: ""
+        markup: True
+        pos_hint: {'center_x': .5,'center_y': .40}
+        halign: 'center'
+        font_size: '20sp'
+    MDLabel:
+        id: tips
+        text: ""
+        pos_hint: {'center_x': .5,'center_y': .30}
+        halign: 'center'
+        markup: True
+        font_size: '16sp'
+
+    MDFloatLayout:
+        size_hint: .9, .1
+        pos_hint: {'center_x':  .5,'center_y': .1}
+        Button:
+            text: "Calculer"
+            pos_hint: {'center_x': .5,'center_y': .09}
+            color: 1, 1, 1, 1
+            background_color: 1, 1, 1, 0
+            font_size: '20sp'
+            on_release: app.calculate()
+            canvas.before:
+                Color:
+                    rgba: 63/255, 81/255, 183/255, 255/255
+            
+                RoundedRectangle:
+                    size: self.size[0], self.size[1]
+                    pos: self.pos
+                    radius: [6]
+                
+        
+                
