@@ -10,8 +10,7 @@ This is a simple BMI (Body Mass Index) calculator built with KivyMD framework. I
 
 ## Screenshots
 
-![Screenshot 1](/screenshots/screenshot1.png)
-![Screenshot 2](/screenshots/screenshot2.png)
+![Screenshot 1](/collage.png)
 
 ## Prerequisites
 
